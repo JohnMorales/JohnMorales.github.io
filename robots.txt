@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://JohnMorales.github.io/sitemap.xml 
