@@ -5,12 +5,18 @@
         <lastmod>2014-01-05T18:13:19-05:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://JohnMorales.github.io/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this/
+        </loc>
+        <lastmod>2014-01-06T06:12:21-05:00</lastmod>
+    </url>
+    <url>
         <loc>http://JohnMorales.github.io/blog/archives/</loc>
-        <lastmod>2014-01-05T18:13:19-05:00</lastmod>
+        <lastmod>2014-01-06T06:12:21-05:00</lastmod>
     </url>
     <url>
         <loc>http://JohnMorales.github.io/</loc>
-        <lastmod>2014-01-05T18:13:19-05:00</lastmod>
+        <lastmod>2014-01-06T06:12:21-05:00</lastmod>
     </url>
     <url>
         <loc>http://JohnMorales.github.io/robots.txt</loc>

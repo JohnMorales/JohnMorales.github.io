@@ -32,17 +32,16 @@
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
   
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-18377898-2']);
-    _gaq.push(['_trackPageview']);
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
+    ga('create', 'UA-18377898-3', 'johnmorales.com');
+    ga('send', 'pageview');
+
+  </script> 
 
 
 </head>
@@ -151,9 +150,17 @@
     <p class="meta">
       
       
+        <a class="basic-alignment right" href="/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this/" title="Next Post: Octopress You have already activated rake but your Gemfile requires rake ... Prepending bundler: exec needs a command to run to your command may solve this.">Octopress You have already activated rake but your Gemfile requires rake ... Prepending bundler: exec needs a command to run to your command may solve this. &raquo;</a>
+      
     </p>
   </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -162,6 +169,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this/">Octopress You Have Already Activated Rake but Your Gemfile Requires Rake ... Prepending Bundler: Exec Needs a Command to Run to Your Command May Solve This.</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/01/05/first-post/">First Post</a>
@@ -216,6 +227,22 @@
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'johnmorales';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://JohnMorales.github.io/blog/2014/01/05/first-post/';
+        var disqus_url = 'http://JohnMorales.github.io/blog/2014/01/05/first-post/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 
