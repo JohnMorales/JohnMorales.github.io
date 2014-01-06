@@ -3,7 +3,7 @@ layout: post
 title: "Octopress You have already activated rake but your Gemfile requires rake ... Prepending bundler: exec needs a command to run to your command may solve this."
 date: 2014-01-06 05:47:47 -0500
 comments: true
-categories: 
+categories: [Errors, Octopress]
 ---
 Here I am setting up Octopress so that I could start blogging, and WHAM! I was immediately received with this error when I tried to run rake install
 
