@@ -9,7 +9,7 @@
   <meta name="author" content="John Morales">
 
   
-  <meta name="description" content="Here I am setting up Octopress so that I could start blogging, and WHAM! I was immediately received with this error when I tried to run rake install &hellip;">
+  <meta name="description" content="Octopress comes &lsquo;out of the box&rsquo; so to speak with two solarized colorschemes. The default is dark, changing it to light is as simple as &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,64 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/01/06/octopress-how-to-switch-from-dark-color-in-code-snippets/">Octopress How to Switch From Dark Color in Code Snippets</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-06T06:33:08-05:00" pubdate data-updated="true">Jan 6<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Octopress comes &lsquo;out of the box&rsquo; so to speak with two solarized colorschemes. The default is dark, changing it to light is as simple as this:</p>
+
+<div><script src='https://gist.github.com/8281532.js'></script>
+<noscript><pre><code>diff --git a/sass/base/_solarized.scss b/sass/base/_solarized.scss
+index 45d8fc5..9e915cc 100644
+--- a/sass/base/_solarized.scss
++++ b/sass/base/_solarized.scss
+@@ -15,7 +15,7 @@ $solar-blue:      #268bd2 !default;
+ $solar-cyan:      #2aa198 !default;
+ $solar-green:     #859900 !default;
+ 
+-$solarized: dark !default;
++$solarized: light !default;
+ 
+ @if $solarized == light {
+ 
+-- 
+1.8.4.2
+
+</code></pre></noscript></div>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -195,6 +253,10 @@ index 182c30b..f487980 100644
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/06/octopress-how-to-switch-from-dark-color-in-code-snippets/">Octopress How to Switch From Dark Color in Code Snippets</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this/">Octopress You Have Already Activated Rake but Your Gemfile Requires Rake &#8230; Prepending Bundler: Exec Needs a Command to Run to Your Command May Solve This.</a>

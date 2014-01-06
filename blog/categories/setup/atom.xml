@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Setup | SiR by John Morales]]></title>
+  <link href="http://JohnMorales.github.io/blog/categories/setup/atom.xml" rel="self"/>
+  <link href="http://JohnMorales.github.io/"/>
+  <updated>2014-01-06T06:36:21-05:00</updated>
+  <id>http://JohnMorales.github.io/</id>
+  <author>
+    <name><![CDATA[John Morales]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress How to Switch From Dark Color in Code Snippets]]></title>
+    <link href="http://JohnMorales.github.io/blog/2014/01/06/octopress-how-to-switch-from-dark-color-in-code-snippets/"/>
+    <updated>2014-01-06T06:33:08-05:00</updated>
+    <id>http://JohnMorales.github.io/blog/2014/01/06/octopress-how-to-switch-from-dark-color-in-code-snippets</id>
+    <content type="html"><![CDATA[<p>Octopress comes &lsquo;out of the box&rsquo; so to speak with two solarized colorschemes. The default is dark, changing it to light is as simple as this:</p>
+
+<p><div><script src='https://gist.github.com/8281532.js'></script>
+<noscript><pre><code>diff --git a/sass/base/_solarized.scss b/sass/base/_solarized.scss
+index 45d8fc5..9e915cc 100644
+--- a/sass/base/_solarized.scss
++++ b/sass/base/_solarized.scss
+@@ -15,7 +15,7 @@ $solar-blue:      #268bd2 !default;
+ $solar-cyan:      #2aa198 !default;
+ $solar-green:     #859900 !default;
+ 
+-$solarized: dark !default;
++$solarized: light !default;
+ 
+ @if $solarized == light {
+ 
+-- 
+1.8.4.2
+
+</code></pre></noscript></div>
+</p>
+]]></content>
+  </entry>
+  
+</feed>

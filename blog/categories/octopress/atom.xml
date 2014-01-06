@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[SiR by John Morales]]></title>
-  <link href="http://JohnMorales.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Octopress | SiR by John Morales]]></title>
+  <link href="http://JohnMorales.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://JohnMorales.github.io/"/>
   <updated>2014-01-06T06:36:21-05:00</updated>
   <id>http://JohnMorales.github.io/</id>
@@ -20,7 +20,7 @@
     <id>http://JohnMorales.github.io/blog/2014/01/06/octopress-how-to-switch-from-dark-color-in-code-snippets</id>
     <content type="html"><![CDATA[<p>Octopress comes &lsquo;out of the box&rsquo; so to speak with two solarized colorschemes. The default is dark, changing it to light is as simple as this:</p>
 
-<div><script src='https://gist.github.com/8281532.js'></script>
+<p><div><script src='https://gist.github.com/8281532.js'></script>
 <noscript><pre><code>diff --git a/sass/base/_solarized.scss b/sass/base/_solarized.scss
 index 45d8fc5..9e915cc 100644
 --- a/sass/base/_solarized.scss
@@ -38,9 +38,7 @@ index 45d8fc5..9e915cc 100644
 1.8.4.2
 
 </code></pre></noscript></div>
-
-
-
+</p>
 ]]></content>
   </entry>
   
@@ -55,7 +53,7 @@ index 45d8fc5..9e915cc 100644
 
 <p>This can be solved simply by changing the Gemfile.lock, changing the version Rake to the version that you have installed:</p>
 
-<div><script src='https://gist.github.com/8281230.js'></script>
+<p><div><script src='https://gist.github.com/8281230.js'></script>
 <noscript><pre><code>From 4694737d7a17db39283d0fc614359777472df217 Mon Sep 17 00:00:00 2001
 From: JohnMorales &lt;jmorales@gmail.com&gt;
 Date: Mon, 6 Jan 2014 05:50:02 -0500
@@ -82,18 +80,9 @@ index 182c30b..f487980 100644
 1.8.4.2
 
 </code></pre></noscript></div>
-
+</p>
 
 <p>Or if you&rsquo;re running rake 0.9.6 you can just apply this patch.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[First Post]]></title>
-    <link href="http://JohnMorales.github.io/blog/2014/01/05/first-post/"/>
-    <updated>2014-01-05T18:02:48-05:00</updated>
-    <id>http://JohnMorales.github.io/blog/2014/01/05/first-post</id>
-    <content type="html"><![CDATA[<p>Hello Internet! I&rsquo;m starting to blog again and hopefully this time I can be consistent.</p>
 ]]></content>
   </entry>
   
