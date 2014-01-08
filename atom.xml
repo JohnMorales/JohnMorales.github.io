@@ -4,7 +4,7 @@
   <title><![CDATA[SiR by John Morales]]></title>
   <link href="http://JohnMorales.github.io/atom.xml" rel="self"/>
   <link href="http://JohnMorales.github.io/"/>
-  <updated>2014-01-06T06:36:21-05:00</updated>
+  <updated>2014-01-07T20:33:22-05:00</updated>
   <id>http://JohnMorales.github.io/</id>
   <author>
     <name><![CDATA[John Morales]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Using Rails Composer]]></title>
+    <link href="http://JohnMorales.github.io/blog/2014/01/07/using-rails-composer/"/>
+    <updated>2014-01-07T19:27:32-05:00</updated>
+    <id>http://JohnMorales.github.io/blog/2014/01/07/using-rails-composer</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve decided to use rails composer for an app that I&rsquo;m building. For those that don&rsquo;t know <a href="http://railsapps.github.io/rails-composer/">rails composer is &ldquo;like the Rails generator on steroids.&rdquo;</a></p>
+
+<p>I looked at a few generators and most of them were old, but it was a toss up with rails composer and <a href="https://github.com/thoughtbot/suspenders">suspenders</a>. I ended up choosing rails composer but I haven&rsquo;t done a pros and cons evaluation between them.</p>
+
+<p>Stay tuned for my review on using rails composer.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octopress How to Switch From Dark Color in Code Snippets]]></title>
