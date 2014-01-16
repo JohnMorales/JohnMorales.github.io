@@ -4,7 +4,7 @@
   <title><![CDATA[SiR by John Morales]]></title>
   <link href="http://JohnMorales.github.io/atom.xml" rel="self"/>
   <link href="http://JohnMorales.github.io/"/>
-  <updated>2014-01-15T21:31:11-05:00</updated>
+  <updated>2014-01-15T21:33:26-05:00</updated>
   <id>http://JohnMorales.github.io/</id>
   <author>
     <name><![CDATA[John Morales]]></name>
@@ -20,7 +20,7 @@
     <id>http://JohnMorales.github.io/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig</id>
     <content type="html"><![CDATA[<h2>The problem</h2>
 
-<p>Recently I needed to grab a commit that was on a release branch and bring it over to the master branch. We weren&rsquo;t ready to merge the hole branch and but I needed a specific commit.</p>
+<p>Recently I needed to grab a commit that was on a release branch and bring it over to the master branch. We weren&rsquo;t ready to merge the whole branch and but I needed a specific commit.</p>
 
 <p>I do not want to have a merge conflict when the release branch is merged back into master.</p>
 
