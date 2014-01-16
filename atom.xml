@@ -4,7 +4,7 @@
   <title><![CDATA[SiR by John Morales]]></title>
   <link href="http://JohnMorales.github.io/atom.xml" rel="self"/>
   <link href="http://JohnMorales.github.io/"/>
-  <updated>2014-01-07T20:33:22-05:00</updated>
+  <updated>2014-01-15T21:31:11-05:00</updated>
   <id>http://JohnMorales.github.io/</id>
   <author>
     <name><![CDATA[John Morales]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Cherry Pick Git Commit Using Tig]]></title>
+    <link href="http://JohnMorales.github.io/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig/"/>
+    <updated>2014-01-15T20:46:10-05:00</updated>
+    <id>http://JohnMorales.github.io/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig</id>
+    <content type="html"><![CDATA[<h2>The problem</h2>
+
+<p>Recently I needed to grab a commit that was on a release branch and bring it over to the master branch. We weren&rsquo;t ready to merge the hole branch and but I needed a specific commit.</p>
+
+<p>I do not want to have a merge conflict when the release branch is merged back into master.</p>
+
+<h2>Solution</h2>
+
+<p>Git supports this via cherry-pick. This approach allows git to know that the commit that was cherry picked can be skipped when merging the branch to the destination containing the cherry-picked commit.</p>
+
+<p>I was able to use tig to accomplish this by doing the following:</p>
+
+<p>checkout the destination branch:  <code>git checkout master</code></p>
+
+<p>then open <code>tig</code></p>
+
+<p>then press &lsquo;b&rsquo; to see all the branches
+<img src="http://JohnMorales.github.io/images/all_branches.png"></p>
+
+<p>then select the branch that contains the commit you want</p>
+
+<p>once you select the commit you want press &lsquo;P&rsquo; (case sensitive)</p>
+
+<p><img src="http://JohnMorales.github.io/images/cherry_pick.png"></p>
+
+<p>the commit should now be on master <code>git push origin</code> to push the change.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using Rails Composer]]></title>

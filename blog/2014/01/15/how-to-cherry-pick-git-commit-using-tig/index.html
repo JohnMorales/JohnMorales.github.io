@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>First Post - SiR by John Morales</title>
+  <title>How to Cherry Pick Git Commit Using Tig - SiR by John Morales</title>
   <meta name="author" content="John Morales">
 
   
-  <meta name="description" content="Hello Internet! I&rsquo;m starting to blog again and hopefully this time I can be consistent.
-">
+  <meta name="description" content="The problem Recently I needed to grab a commit that was on a release branch and bring it over to the master branch. We weren&rsquo;t ready to merge &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://JohnMorales.github.io/blog/2014/01/05/first-post">
+  <link rel="canonical" href="http://JohnMorales.github.io/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="SiR by John Morales" type="application/atom+xml">
@@ -80,7 +79,7 @@
   
   <header>
     
-      <h1 class="entry-title">First Post</h1>
+      <h1 class="entry-title">How to Cherry Pick Git Commit Using Tig</h1>
     
     
       <p class="meta">
@@ -96,14 +95,39 @@
   
 
 
-<time datetime="2014-01-05T18:02:48-05:00" pubdate data-updated="true">Jan 5<span>th</span>, 2014</time>
+<time datetime="2014-01-15T20:46:10-05:00" pubdate data-updated="true">Jan 15<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Hello Internet! I&rsquo;m starting to blog again and hopefully this time I can be consistent.</p>
+<div class="entry-content"><h2>The problem</h2>
+
+<p>Recently I needed to grab a commit that was on a release branch and bring it over to the master branch. We weren&rsquo;t ready to merge the hole branch and but I needed a specific commit.</p>
+
+<p>I do not want to have a merge conflict when the release branch is merged back into master.</p>
+
+<h2>Solution</h2>
+
+<p>Git supports this via cherry-pick. This approach allows git to know that the commit that was cherry picked can be skipped when merging the branch to the destination containing the cherry-picked commit.</p>
+
+<p>I was able to use tig to accomplish this by doing the following:</p>
+
+<p>checkout the destination branch:  <code>git checkout master</code></p>
+
+<p>then open <code>tig</code></p>
+
+<p>then press &lsquo;b&rsquo; to see all the branches
+<img src="/images/all_branches.png"></p>
+
+<p>then select the branch that contains the commit you want</p>
+
+<p>once you select the commit you want press &lsquo;P&rsquo; (case sensitive)</p>
+
+<p><img src="/images/cherry_pick.png"></p>
+
+<p>the commit should now be on master <code>git push origin</code> to push the change.</p>
 </div>
 
 
@@ -126,21 +150,15 @@
   
 
 
-<time datetime="2014-01-05T18:02:48-05:00" pubdate data-updated="true">Jan 5<span>th</span>, 2014</time>
+<time datetime="2014-01-15T20:46:10-05:00" pubdate data-updated="true">Jan 15<span>th</span>, 2014</time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/general/'>General</a>
-  
-</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://JohnMorales.github.io/blog/2014/01/05/first-post/" data-via="jm0rales" data-counturl="http://JohnMorales.github.io/blog/2014/01/05/first-post/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://JohnMorales.github.io/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig/" data-via="jm0rales" data-counturl="http://JohnMorales.github.io/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig/" >Tweet</a>
   
   
   
@@ -149,8 +167,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2014/01/07/using-rails-composer/" title="Previous Post: using rails composer">&laquo; using rails composer</a>
       
-        <a class="basic-alignment right" href="/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this/" title="Next Post: Octopress You have already activated rake but your Gemfile requires rake ... Prepending bundler: exec needs a command to run to your command may solve this.">Octopress You have already activated rake but your Gemfile requires rake ... Prepending bundler: exec needs a command to run to your command may solve this. &raquo;</a>
       
     </p>
   </footer>
@@ -245,8 +263,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://JohnMorales.github.io/blog/2014/01/05/first-post/';
-        var disqus_url = 'http://JohnMorales.github.io/blog/2014/01/05/first-post/';
+        var disqus_identifier = 'http://JohnMorales.github.io/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig/';
+        var disqus_url = 'http://JohnMorales.github.io/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig/';
         var disqus_script = 'embed.js';
       
     (function () {
