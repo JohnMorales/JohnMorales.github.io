@@ -9,7 +9,7 @@ categories:
 
 The problem
 -----------
-Recently I needed to grab a commit that was on a release branch and bring it over to the master branch. We weren't ready to merge the hole branch and but I needed a specific commit.  
+Recently I needed to grab a commit that was on a release branch and bring it over to the master branch. We weren't ready to merge the whole branch and but I needed a specific commit.  
 
 I do not want to have a merge conflict when the release branch is merged back into master.
 
