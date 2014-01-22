@@ -6,11 +6,11 @@ comments: true
 categories: EmberJS
 ---
 
-I'm creating my first application using EmberJS and I recieved the follwoing error: 
+I'm creating my first application using EmberJS and I recieved the following error: 
 
 `the id property must be defined as a number or string for fixture`.
 
-When I was simply trying to save the model after the user clicks the action. 
+This occurred when I was simply trying to save the model after the user clicks the action. 
 I was a little confused by this error, because if you try to define an id property in the model EmberJS yells at you with this message:
 
 `You may not set 'id' as an attribute on your model.`
@@ -26,3 +26,6 @@ This way you could mimick the responses that you would get from a real backend. 
 ### FixtureAdapter is faking a _real_ backend
 
 And a real backend is required to set one.
+
+
+Thanks to jkarsrud on freenode#emberjs for his help.
