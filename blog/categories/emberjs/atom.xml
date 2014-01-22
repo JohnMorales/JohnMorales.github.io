@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: EmberJS | SiR by John Morales]]></title>
+  <link href="http://JohnMorales.github.io/blog/categories/emberjs/atom.xml" rel="self"/>
+  <link href="http://JohnMorales.github.io/"/>
+  <updated>2014-01-22T18:27:35-05:00</updated>
+  <id>http://JohnMorales.github.io/</id>
+  <author>
+    <name><![CDATA[John Morales]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[EmberJS: The Id Property Must Be Defined as a Number or String for Fixture]]></title>
+    <link href="http://JohnMorales.github.io/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture/"/>
+    <updated>2014-01-22T18:09:45-05:00</updated>
+    <id>http://JohnMorales.github.io/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m creating my first application using EmberJS and I recieved the follwoing error:</p>
+
+<p><code>the id property must be defined as a number or string for fixture</code>.</p>
+
+<p>When I was simply trying to save the model after the user clicks the action.
+I was a little confused by this error, because if you try to define an id property in the model EmberJS yells at you with this message:</p>
+
+<p><code>You may not set 'id' as an attribute on your model.</code></p>
+
+<p>I&rsquo;ve read that it&rsquo;s the store&rsquo;s job to assign the id of the model record.
+It turns out that this is due to using <code>DS.FixtureAdapter</code>, instead of the <code>DS.RESTAdapter</code>.</p>
+
+<p>It turns out that the use case for the FixtureAdapter is when you want to build an app and don&rsquo;t want to be concerned with the backend.
+In other words, the RESTAdapter would actually send the restful requests to an endpoint for your crud and verb actions. Where as the FixtureAdapter is a stub.
+For example, a front-end developer that is only in charge of the UI and doesn&rsquo;t want to setup the dependencies for the backend.
+This way you could mimick the responses that you would get from a real backend. This is why EmberJS is asking for an id:</p>
+
+<h3>FixtureAdapter is faking a <em>real</em> backend</h3>
+
+<p>And a real backend is required to set one.</p>
+]]></content>
+  </entry>
+  
+</feed>

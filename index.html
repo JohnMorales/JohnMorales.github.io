@@ -9,7 +9,7 @@
   <meta name="author" content="John Morales">
 
   
-  <meta name="description" content="The problem Recently I needed to grab a commit that was on a release branch and bring it over to the master branch. We weren&rsquo;t ready to merge &hellip;">
+  <meta name="description" content="I&rsquo;m creating my first application using EmberJS and I recieved the follwoing error: the id property must be defined as a number or string for &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,61 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture/">EmberJS: The Id Property Must Be Defined as a Number or String for Fixture</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-22T18:09:45-05:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;m creating my first application using EmberJS and I recieved the follwoing error:</p>
+
+<p><code>the id property must be defined as a number or string for fixture</code>.</p>
+
+<p>When I was simply trying to save the model after the user clicks the action.
+I was a little confused by this error, because if you try to define an id property in the model EmberJS yells at you with this message:</p>
+
+<p><code>You may not set 'id' as an attribute on your model.</code></p>
+
+<p>I&rsquo;ve read that it&rsquo;s the store&rsquo;s job to assign the id of the model record.
+It turns out that this is due to using <code>DS.FixtureAdapter</code>, instead of the <code>DS.RESTAdapter</code>.</p>
+
+<p>It turns out that the use case for the FixtureAdapter is when you want to build an app and don&rsquo;t want to be concerned with the backend.
+In other words, the RESTAdapter would actually send the restful requests to an endpoint for your crud and verb actions. Where as the FixtureAdapter is a stub.
+For example, a front-end developer that is only in charge of the UI and doesn&rsquo;t want to setup the dependencies for the backend.
+This way you could mimick the responses that you would get from a real backend. This is why EmberJS is asking for an id:</p>
+
+<h3>FixtureAdapter is faking a <em>real</em> backend</h3>
+
+<p>And a real backend is required to set one.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -356,6 +411,10 @@ index 182c30b..f487980 100644
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture/">EmberJS: The Id Property Must Be Defined as a Number or String for Fixture</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig/">How to Cherry Pick Git Commit Using Tig</a>
       </li>
     
@@ -369,10 +428,6 @@ index 182c30b..f487980 100644
     
       <li class="post">
         <a href="/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this/">Octopress You Have Already Activated Rake but Your Gemfile Requires Rake &#8230; Prepending Bundler: Exec Needs a Command to Run to Your Command May Solve This.</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/05/first-post/">First Post</a>
       </li>
     
   </ul>

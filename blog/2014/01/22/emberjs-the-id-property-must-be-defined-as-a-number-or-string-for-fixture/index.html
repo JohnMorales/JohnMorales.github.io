@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Errors - SiR by John Morales</title>
+  <title>EmberJS: The Id Property Must Be Defined as a Number or String for Fixture - SiR by John Morales</title>
   <meta name="author" content="John Morales">
 
   
-  <meta name="description" content="Category: Errors">
+  <meta name="description" content="I&rsquo;m creating my first application using EmberJS and I recieved the follwoing error: the id property must be defined as a number or string for &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://JohnMorales.github.ioblog/categories/errors">
+  <link rel="canonical" href="http://JohnMorales.github.io/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="SiR by John Morales" type="application/atom+xml">
@@ -75,36 +75,110 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Errors</h1>
+    
+      <h1 class="entry-title">EmberJS: The Id Property Must Be Defined as a Number or String for Fixture</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-22T18:09:45-05:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2014</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>I&rsquo;m creating my first application using EmberJS and I recieved the follwoing error:</p>
 
-  
-  <h2>2014</h2>
+<p><code>the id property must be defined as a number or string for fixture</code>.</p>
 
-<article>
-  
-<h1><a href="/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this/">Octopress You Have Already Activated Rake but Your Gemfile Requires Rake ... Prepending Bundler: Exec Needs a Command to Run to Your Command May Solve This.</a></h1>
-<time datetime="2014-01-06T05:47:47-05:00" pubdate><span class='month'>Jan</span> <span class='day'>06</span> <span class='year'>2014</span></time>
+<p>When I was simply trying to save the model after the user clicks the action.
+I was a little confused by this error, because if you try to define an id property in the model EmberJS yells at you with this message:</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/errors/'>Errors</a>, <a class='category' href='/blog/categories/octopress/'>Octopress</a></span>
-</footer>
+<p><code>You may not set 'id' as an attribute on your model.</code></p>
 
+<p>I&rsquo;ve read that it&rsquo;s the store&rsquo;s job to assign the id of the model record.
+It turns out that this is due to using <code>DS.FixtureAdapter</code>, instead of the <code>DS.RESTAdapter</code>.</p>
 
-</article>
+<p>It turns out that the use case for the FixtureAdapter is when you want to build an app and don&rsquo;t want to be concerned with the backend.
+In other words, the RESTAdapter would actually send the restful requests to an endpoint for your crud and verb actions. Where as the FixtureAdapter is a stub.
+For example, a front-end developer that is only in charge of the UI and doesn&rsquo;t want to setup the dependencies for the backend.
+This way you could mimick the responses that you would get from a real backend. This is why EmberJS is asking for an id:</p>
 
+<h3>FixtureAdapter is faking a <em>real</em> backend</h3>
+
+<p>And a real backend is required to set one.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">John Morales</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-22T18:09:45-05:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/emberjs/'>EmberJS</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://JohnMorales.github.io/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture/" data-via="jm0rales" data-counturl="http://JohnMorales.github.io/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig/" title="Previous Post: How to cherry pick git commit using Tig">&laquo; How to cherry pick git commit using Tig</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -188,7 +262,10 @@
       var disqus_shortname = 'johnmorales';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://JohnMorales.github.io/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture/';
+        var disqus_url = 'http://JohnMorales.github.io/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
