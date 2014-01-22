@@ -4,7 +4,7 @@
   <title><![CDATA[Category: EmberJS | SiR by John Morales]]></title>
   <link href="http://JohnMorales.github.io/blog/categories/emberjs/atom.xml" rel="self"/>
   <link href="http://JohnMorales.github.io/"/>
-  <updated>2014-01-22T18:27:35-05:00</updated>
+  <updated>2014-01-22T18:30:34-05:00</updated>
   <id>http://JohnMorales.github.io/</id>
   <author>
     <name><![CDATA[John Morales]]></name>
@@ -18,11 +18,11 @@
     <link href="http://JohnMorales.github.io/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture/"/>
     <updated>2014-01-22T18:09:45-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture</id>
-    <content type="html"><![CDATA[<p>I&rsquo;m creating my first application using EmberJS and I recieved the follwoing error:</p>
+    <content type="html"><![CDATA[<p>I&rsquo;m creating my first application using EmberJS and I recieved the following error:</p>
 
 <p><code>the id property must be defined as a number or string for fixture</code>.</p>
 
-<p>When I was simply trying to save the model after the user clicks the action.
+<p>This occurred when I was simply trying to save the model after the user clicks the action.
 I was a little confused by this error, because if you try to define an id property in the model EmberJS yells at you with this message:</p>
 
 <p><code>You may not set 'id' as an attribute on your model.</code></p>
@@ -38,6 +38,8 @@ This way you could mimick the responses that you would get from a real backend. 
 <h3>FixtureAdapter is faking a <em>real</em> backend</h3>
 
 <p>And a real backend is required to set one.</p>
+
+<p>Thanks to jkarsrud on freenode#emberjs for his help.</p>
 ]]></content>
   </entry>
   
