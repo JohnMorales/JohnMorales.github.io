@@ -4,7 +4,7 @@
   <title><![CDATA[Category: EmberJS, | SiR by John Morales]]></title>
   <link href="http://JohnMorales.github.io/blog/categories/emberjs/atom.xml" rel="self"/>
   <link href="http://JohnMorales.github.io/"/>
-  <updated>2014-01-26T07:47:53-05:00</updated>
+  <updated>2014-01-26T08:01:31-05:00</updated>
   <id>http://JohnMorales.github.io/</id>
   <author>
     <name><![CDATA[John Morales]]></name>
@@ -18,8 +18,8 @@
     <link href="http://JohnMorales.github.io/blog/2014/01/26/embjerjs-is-a-more-than-just-model-view-controller/"/>
     <updated>2014-01-26T07:21:31-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/26/embjerjs-is-a-more-than-just-model-view-controller</id>
-    <content type="html"><![CDATA[<p>I&rsquo;m learning EmbjerJS, and it&rsquo;s a great framework. One of the things that I struggled with is that their documentation says that EmberJS is an MVC framework.
-I said OK, I know MVC so this is great..then I read a few more docs about how Ember view binding works and tried to create a quick prototype.
+    <content type="html"><![CDATA[<p>I&rsquo;m learning EmbjerJS, and it&rsquo;s a great framework. One of the things that I struggled with is that I thought it was a vanilla MVC javascript framework.
+I said OK, I know MVC so this is great..then I read a few docs about how Ember view binding works and tried to create a quick prototype.
 I could not get a simple form post working. Why?</p>
 
 <h2>I assumed it was just an MVC framework.</h2>
