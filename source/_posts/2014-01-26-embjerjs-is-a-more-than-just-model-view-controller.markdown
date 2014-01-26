@@ -22,7 +22,10 @@ Here's a diagram of how I understand vanilla MVC:
 
 {% img center /images/mvc.png %}
 
-I have read about [Ember's view binding](http://emberjs.com/guides/templates/binding-element-attributes/), so I expected my model to have their attributes automatically reflected from the form, but it wasn't working, obvisously I wasn't _getting_ it.
+##Back to my problem 
+So I created a model object to match the form data, and the view pulled properties from it to show on the form as expected.
+I have read about [Ember's view binding](http://emberjs.com/guides/templates/binding-element-attributes/), so after the user edited the form and clicked save, I expected my model to have those attributes automatically reflected on my model from the form, but it wasn't working. 
+obvisously I wasn't _getting_ it.
 
 ## So I started working through their walkthrough.
 
@@ -35,7 +38,7 @@ In a [MVVM](http://en.wikipedia.org/wiki/Model_View_ViewModel) (Model-View-ViewM
 The View does not interact with the Model but instead interacts with a [decorated](http://en.wikipedia.org/wiki/Decorator_pattern) Model called the ViewModel.
 These decorations are UI specific to help facilate the view.
 In addition to having UI specific fields, The ViewModel object can also constructed in a way that it hides away all the complexities of dealing with UIs where you have multiple models in order to render a view.
-Therefore the View just needs to communitcate ViewModel and not have to know the relationships between models. 
+Therefore the View just needs to communicate ViewModel and not have to know the relationships between models. 
 
 But there is no concept of ViewModel in EmberJS. So the Controllers play that role.
 
@@ -55,4 +58,4 @@ Note that the default controller implementation proxies 'gets' from the controll
 Once I was able to understand that, it was clear what my problem was. I expected once the user issued the 'save' command the model would reflect the form data (via Ember's view binding). 
 But it was the Controller that received all the form data. I needed to set the data on the model and was able to get a simple form post!
 
-I hope this helps someone understand better as it did for me.. 
+I hope this helps someone understand EmberJS better as it did for me.. 
