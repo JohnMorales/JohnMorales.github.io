@@ -4,7 +4,7 @@
   <title><![CDATA[Category: EmberJS, | SiR by John Morales]]></title>
   <link href="http://JohnMorales.github.io/blog/categories/emberjs/atom.xml" rel="self"/>
   <link href="http://JohnMorales.github.io/"/>
-  <updated>2014-01-26T08:01:31-05:00</updated>
+  <updated>2014-01-26T14:57:27-05:00</updated>
   <id>http://JohnMorales.github.io/</id>
   <author>
     <name><![CDATA[John Morales]]></name>
@@ -34,7 +34,11 @@ The Controller (in MVC) is in charge of dealing with those commands, it handles 
 
 <p><img class="center" src="/images/mvc.png"></p>
 
-<p>I have read about <a href="http://emberjs.com/guides/templates/binding-element-attributes/">Ember&rsquo;s view binding</a>, so I expected my model to have their attributes automatically reflected from the form, but it wasn&rsquo;t working, obvisously I wasn&rsquo;t <em>getting</em> it.</p>
+<h2>Back to my problem</h2>
+
+<p>So I created a model object to match the form data, and the view pulled properties from it to show on the form as expected.
+I have read about <a href="http://emberjs.com/guides/templates/binding-element-attributes/">Ember&rsquo;s view binding</a>, so after the user edited the form and clicked save, I expected my model to have those attributes automatically reflected on my model from the form, but it wasn&rsquo;t working.
+obvisously I wasn&rsquo;t <em>getting</em> it.</p>
 
 <h2>So I started working through their walkthrough.</h2>
 
@@ -47,7 +51,7 @@ The Controller (in MVC) is in charge of dealing with those commands, it handles 
 The View does not interact with the Model but instead interacts with a <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorated</a> Model called the ViewModel.
 These decorations are UI specific to help facilate the view.
 In addition to having UI specific fields, The ViewModel object can also constructed in a way that it hides away all the complexities of dealing with UIs where you have multiple models in order to render a view.
-Therefore the View just needs to communitcate ViewModel and not have to know the relationships between models.</p>
+Therefore the View just needs to communicate ViewModel and not have to know the relationships between models.</p>
 
 <p>But there is no concept of ViewModel in EmberJS. So the Controllers play that role.</p>
 
@@ -61,12 +65,12 @@ Methods like hiding/showing logic and handling staleness dependencies of control
 
 <p><img class="center" src="/images/em_mvc.png"></p>
 
-<p>Note that the default controller implementation proxies &lsquo;gets&rsquo; from the controller to the backing model so that it feels more MVC like.</p>
+<p>Note that the default controller implementation proxies &lsquo;gets&rsquo; from the view to the backing model so that it feels more like the vanilla MVC.</p>
 
 <p>Once I was able to understand that, it was clear what my problem was. I expected once the user issued the &lsquo;save&rsquo; command the model would reflect the form data (via Ember&rsquo;s view binding).
 But it was the Controller that received all the form data. I needed to set the data on the model and was able to get a simple form post!</p>
 
-<p>I hope this helps someone understand better as it did for me..</p>
+<p>I hope this helps someone understand EmberJS better as it did for me..</p>
 ]]></content>
   </entry>
   
