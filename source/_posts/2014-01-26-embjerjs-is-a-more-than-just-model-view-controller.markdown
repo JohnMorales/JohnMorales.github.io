@@ -6,8 +6,8 @@ comments: true
 categories: EmberJS, Patterns
 ---
 
-I'm learning EmbjerJS, and it's a great framework. One of the things that I struggled with is that their documentation says that EmberJS is an MVC framework.
-I said OK, I know MVC so this is great..then I read a few more docs about how Ember view binding works and tried to create a quick prototype. 
+I'm learning EmbjerJS, and it's a great framework. One of the things that I struggled with is that I thought it was a vanilla MVC javascript framework.
+I said OK, I know MVC so this is great..then I read a few docs about how Ember view binding works and tried to create a quick prototype. 
 I could not get a simple form post working. Why?
 
 ## I assumed it was just an MVC framework.
