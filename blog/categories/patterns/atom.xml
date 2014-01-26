@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: EmberJS, | SiR by John Morales]]></title>
-  <link href="http://JohnMorales.github.io/blog/categories/emberjs/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Patterns | SiR by John Morales]]></title>
+  <link href="http://JohnMorales.github.io/blog/categories/patterns/atom.xml" rel="self"/>
   <link href="http://JohnMorales.github.io/"/>
   <updated>2014-01-26T07:47:53-05:00</updated>
   <id>http://JohnMorales.github.io/</id>

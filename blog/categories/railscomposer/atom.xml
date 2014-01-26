@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: RailsComposer | SiR by John Morales]]></title>
+  <link href="http://JohnMorales.github.io/blog/categories/railscomposer/atom.xml" rel="self"/>
+  <link href="http://JohnMorales.github.io/"/>
+  <updated>2014-01-26T07:47:53-05:00</updated>
+  <id>http://JohnMorales.github.io/</id>
+  <author>
+    <name><![CDATA[John Morales]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using Rails Composer -- Followup]]></title>
+    <link href="http://JohnMorales.github.io/blog/2014/01/22/using-rails-composer-followup/"/>
+    <updated>2014-01-22T18:32:04-05:00</updated>
+    <id>http://JohnMorales.github.io/blog/2014/01/22/using-rails-composer-followup</id>
+    <content type="html"><![CDATA[<p>I just wanted to follow up on using rails composer. After speaking with <a href="http://ryan.mcgeary.org/">Ryan McGeary</a>, I&rsquo;ve since decided that using rails composer wasn&rsquo;t the right tool for this job.</p>
+
+<ul>
+<li>Rail composer sets up more stuff than I need, and it would take some work trimming out some of the gems/files it has.</li>
+<li>Devise was more than I needed for the scope of the project that I need.</li>
+<li>It&rsquo;s even questionable whether or not I should use rails.</li>
+<li>I want to learn a new JavaScript MVC framework. (I chose EmberJS)</li>
+<li>It also reduces the need for another node in the system I&rsquo;m trying to create.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
