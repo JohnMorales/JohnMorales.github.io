@@ -53,7 +53,7 @@ In EmberJS it's more of a straight line:
 
 {% img center /images/em_mvc.png %}
 
-Note that the default controller implementation proxies 'gets' from the controller to the backing model so that it feels more MVC like.
+Note that the default controller implementation proxies 'gets' from the view to the backing model so that it feels more like the vanilla MVC.
 
 Once I was able to understand that, it was clear what my problem was. I expected once the user issued the 'save' command the model would reflect the form data (via Ember's view binding). 
 But it was the Controller that received all the form data. I needed to set the data on the model and was able to get a simple form post!
