@@ -1,11 +1,9 @@
 ---
-o
-
 layout: post
 title: "EmbjerJS is a more than just Model View Controller"
 date: 2014-01-26 07:21:31 -0500
 comments: true
-categories: 
+categories: EmberJS, Patterns
 ---
 
 I'm learning EmbjerJS, and it's a great framework. One of the things that I struggled with is that their documentation says that EmberJS is an MVC framework.
