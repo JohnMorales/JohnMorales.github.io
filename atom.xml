@@ -4,7 +4,7 @@
   <title><![CDATA[SiR by John Morales]]></title>
   <link href="http://JohnMorales.github.io/atom.xml" rel="self"/>
   <link href="http://JohnMorales.github.io/"/>
-  <updated>2014-01-26T15:02:11-05:00</updated>
+  <updated>2014-04-16T15:55:09-07:00</updated>
   <id>http://JohnMorales.github.io/</id>
   <author>
     <name><![CDATA[John Morales]]></name>
@@ -14,9 +14,71 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Testing Express With Mocha]]></title>
+    <link href="http://JohnMorales.github.io/blog/2014/04/16/testing-express-with-mocha/"/>
+    <updated>2014-04-16T06:13:11-07:00</updated>
+    <id>http://JohnMorales.github.io/blog/2014/04/16/testing-express-with-mocha</id>
+    <content type="html"><![CDATA[<p>Even though this post doesn&rsquo;t technically have anything to do with Mocha, I&rsquo;m
+mentioning it in the title because I was using Mocha, but Mocha has a gap of
+features when it comes to testing http interactions. You need to augment it
+with another module.</p>
+
+<p>I&rsquo;m working with NodeJS and trying to experiment creating
+a web backend that will handle form posts from my simple html web page. In
+order to test the simple express app I wanted to use mocha.</p>
+
+<p>After installing mocha and express I created my handler but wanted a way to
+fake the requests. I couldn&rsquo;t fiqure out how to test the application so I
+started googling to see what was recommended. I found a post on
+<a href="http://devcenter.wercker.com/articles/languages/nodejs/getting-started-express-and-mocha.html">wrecker</a>
+showing to use supertest.</p>
+
+<p>I then started to look to make sure that supertest is
+in fact the right tool that I need. I couldn&rsquo;t find a definitive direction on
+how to test web form requests using node so I&rsquo;m posting this.</p>
+
+<p>I confirmed simply by <a href="https://github.com/koajs/statsd/commit/2d22eeee009eff704f2ba2da36be0c50991f3530">reviewing code from the one of the nodejs contributors</a>
+and confirmed that he is using supertest to test their http interactions.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">assert</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;assert&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;supertest&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../server.js&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Post&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'> <span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Sunny path&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>   <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should just work&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">request</span><span class="p">(</span><span class="nx">app</span><span class="p">)</span>
+</span><span class='line'>      <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/status&#39;</span><span class="p">)</span>
+</span><span class='line'>      <span class="p">.</span><span class="nx">expect</span><span class="p">(</span><span class="sr">/Hello there!/</span><span class="p">,</span> <span class="nx">done</span><span class="p">);</span>
+</span><span class='line'>   <span class="p">});</span>
+</span><span class='line'> <span class="p">});</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>here&rsquo;s the result</p>
+
+<p><img src="http://JohnMorales.github.io/images/mocha_pass.png"></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[EmbjerJS Is a More Than Just Model View Controller]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/26/embjerjs-is-a-more-than-just-model-view-controller/"/>
-    <updated>2014-01-26T07:21:31-05:00</updated>
+    <updated>2014-01-26T04:21:31-08:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/26/embjerjs-is-a-more-than-just-model-view-controller</id>
     <content type="html"><![CDATA[<p>I&rsquo;m learning EmbjerJS, and it&rsquo;s a great framework. One of the things that I struggled with is that I thought it was a vanilla MVC javascript framework.
 I said OK, I know MVC so this is great..then I read a few docs about how Ember view binding works and tried to create a quick prototype.
@@ -77,7 +139,7 @@ But it was the Controller that received all the form data. I needed to set the d
   <entry>
     <title type="html"><![CDATA[Using Rails Composer -- Followup]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/22/using-rails-composer-followup/"/>
-    <updated>2014-01-22T18:32:04-05:00</updated>
+    <updated>2014-01-22T15:32:04-08:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/22/using-rails-composer-followup</id>
     <content type="html"><![CDATA[<p>I just wanted to follow up on using rails composer. After speaking with <a href="http://ryan.mcgeary.org/">Ryan McGeary</a>, I&rsquo;ve since decided that using rails composer wasn&rsquo;t the right tool for this job.</p>
 
@@ -95,7 +157,7 @@ But it was the Controller that received all the form data. I needed to set the d
   <entry>
     <title type="html"><![CDATA[EmberJS: The Id Property Must Be Defined as a Number or String for Fixture]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture/"/>
-    <updated>2014-01-22T18:09:45-05:00</updated>
+    <updated>2014-01-22T15:09:45-08:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture</id>
     <content type="html"><![CDATA[<p>I&rsquo;m creating my first application using EmberJS and I recieved the following error:</p>
 
@@ -125,7 +187,7 @@ This way you could mimick the responses that you would get from a real backend. 
   <entry>
     <title type="html"><![CDATA[How to Cherry Pick Git Commit Using Tig]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig/"/>
-    <updated>2014-01-15T20:46:10-05:00</updated>
+    <updated>2014-01-15T17:46:10-08:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig</id>
     <content type="html"><![CDATA[<h2>The problem</h2>
 
@@ -159,7 +221,7 @@ This way you could mimick the responses that you would get from a real backend. 
   <entry>
     <title type="html"><![CDATA[Using Rails Composer]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/07/using-rails-composer/"/>
-    <updated>2014-01-07T19:27:32-05:00</updated>
+    <updated>2014-01-07T16:27:32-08:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/07/using-rails-composer</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve decided to use rails composer for an app that I&rsquo;m building. For those that don&rsquo;t know <a href="http://railsapps.github.io/rails-composer/">rails composer is &ldquo;like the Rails generator on steroids.&rdquo;</a></p>
 
@@ -172,7 +234,7 @@ This way you could mimick the responses that you would get from a real backend. 
   <entry>
     <title type="html"><![CDATA[Octopress How to Switch From Dark Color in Code Snippets]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/06/octopress-how-to-switch-from-dark-color-in-code-snippets/"/>
-    <updated>2014-01-06T06:33:08-05:00</updated>
+    <updated>2014-01-06T03:33:08-08:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/06/octopress-how-to-switch-from-dark-color-in-code-snippets</id>
     <content type="html"><![CDATA[<p>Octopress comes &lsquo;out of the box&rsquo; so to speak with two solarized colorschemes. The default is dark, changing it to light is as simple as this:</p>
 
@@ -203,7 +265,7 @@ index 45d8fc5..9e915cc 100644
   <entry>
     <title type="html"><![CDATA[Octopress You Have Already Activated Rake but Your Gemfile Requires Rake ... Prepending Bundler: Exec Needs a Command to Run to Your Command May Solve This.]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this/"/>
-    <updated>2014-01-06T05:47:47-05:00</updated>
+    <updated>2014-01-06T02:47:47-08:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this</id>
     <content type="html"><![CDATA[<p>Here I am setting up Octopress so that I could start blogging, and WHAM! I was immediately received with this error when I tried to run rake install</p>
 
@@ -247,7 +309,7 @@ index 182c30b..f487980 100644
   <entry>
     <title type="html"><![CDATA[First Post]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/05/first-post/"/>
-    <updated>2014-01-05T18:02:48-05:00</updated>
+    <updated>2014-01-05T15:02:48-08:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/05/first-post</id>
     <content type="html"><![CDATA[<p>Hello Internet! I&rsquo;m starting to blog again and hopefully this time I can be consistent.</p>
 ]]></content>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Express | SiR by John Morales]]></title>
+  <link href="http://JohnMorales.github.io/blog/categories/express/atom.xml" rel="self"/>
+  <link href="http://JohnMorales.github.io/"/>
+  <updated>2014-04-16T15:55:09-07:00</updated>
+  <id>http://JohnMorales.github.io/</id>
+  <author>
+    <name><![CDATA[John Morales]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Testing Express With Mocha]]></title>
+    <link href="http://JohnMorales.github.io/blog/2014/04/16/testing-express-with-mocha/"/>
+    <updated>2014-04-16T06:13:11-07:00</updated>
+    <id>http://JohnMorales.github.io/blog/2014/04/16/testing-express-with-mocha</id>
+    <content type="html"><![CDATA[<p>Even though this post doesn&rsquo;t technically have anything to do with Mocha, I&rsquo;m
+mentioning it in the title because I was using Mocha, but Mocha has a gap of
+features when it comes to testing http interactions. You need to augment it
+with another module.</p>
+
+<p>I&rsquo;m working with NodeJS and trying to experiment creating
+a web backend that will handle form posts from my simple html web page. In
+order to test the simple express app I wanted to use mocha.</p>
+
+<p>After installing mocha and express I created my handler but wanted a way to
+fake the requests. I couldn&rsquo;t fiqure out how to test the application so I
+started googling to see what was recommended. I found a post on
+<a href="http://devcenter.wercker.com/articles/languages/nodejs/getting-started-express-and-mocha.html">wrecker</a>
+showing to use supertest.</p>
+
+<p>I then started to look to make sure that supertest is
+in fact the right tool that I need. I couldn&rsquo;t find a definitive direction on
+how to test web form requests using node so I&rsquo;m posting this.</p>
+
+<p>I confirmed simply by <a href="https://github.com/koajs/statsd/commit/2d22eeee009eff704f2ba2da36be0c50991f3530">reviewing code from the one of the nodejs contributors</a>
+and confirmed that he is using supertest to test their http interactions.
+``` javascript
+var assert = require(&lsquo;assert&rsquo;);
+var request = require(&lsquo;supertest&rsquo;);
+var app = require(&lsquo;../server.js&rsquo;);</p>
+
+<p>describe(&lsquo;Post&rsquo;, function() {
+ describe(&lsquo;Sunny path&rsquo;, function() {
+   it(&lsquo;should just work&rsquo;, function(done) {</p>
+
+<pre><code>  request(app)
+  .get('/status')
+  .expect(/Hello there!/, done);
+</code></pre>
+
+<p>   });
+ });
+});
+```
+here&rsquo;s the result</p>
+
+<p><img src="/images/mocha_pass.png"></p>
+]]></content>
+  </entry>
+  
+</feed>

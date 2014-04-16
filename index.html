@@ -9,7 +9,8 @@
   <meta name="author" content="John Morales">
 
   
-  <meta name="description" content="I&rsquo;m learning EmbjerJS, and it&rsquo;s a great framework. One of the things that I struggled with is that I thought it was a vanilla MVC &hellip;">
+  <meta name="description" content="Even though this post doesn&rsquo;t technically have anything to do with Mocha, I&rsquo;m
+mentioning it in the title because I was using Mocha, but &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -82,6 +83,95 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/04/16/testing-express-with-mocha/">Testing Express With Mocha</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-16T06:13:11-07:00" pubdate data-updated="true">Apr 16<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Even though this post doesn&rsquo;t technically have anything to do with Mocha, I&rsquo;m
+mentioning it in the title because I was using Mocha, but Mocha has a gap of
+features when it comes to testing http interactions. You need to augment it
+with another module.</p>
+
+<p>I&rsquo;m working with NodeJS and trying to experiment creating
+a web backend that will handle form posts from my simple html web page. In
+order to test the simple express app I wanted to use mocha.</p>
+
+<p>After installing mocha and express I created my handler but wanted a way to
+fake the requests. I couldn&rsquo;t fiqure out how to test the application so I
+started googling to see what was recommended. I found a post on
+<a href="http://devcenter.wercker.com/articles/languages/nodejs/getting-started-express-and-mocha.html">wrecker</a>
+showing to use supertest.</p>
+
+<p>I then started to look to make sure that supertest is
+in fact the right tool that I need. I couldn&rsquo;t find a definitive direction on
+how to test web form requests using node so I&rsquo;m posting this.</p>
+
+<p>I confirmed simply by <a href="https://github.com/koajs/statsd/commit/2d22eeee009eff704f2ba2da36be0c50991f3530">reviewing code from the one of the nodejs contributors</a>
+and confirmed that he is using supertest to test their http interactions.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">assert</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;assert&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;supertest&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../server.js&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Post&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'> <span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Sunny path&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>   <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should just work&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">request</span><span class="p">(</span><span class="nx">app</span><span class="p">)</span>
+</span><span class='line'>      <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/status&#39;</span><span class="p">)</span>
+</span><span class='line'>      <span class="p">.</span><span class="nx">expect</span><span class="p">(</span><span class="sr">/Hello there!/</span><span class="p">,</span> <span class="nx">done</span><span class="p">);</span>
+</span><span class='line'>   <span class="p">});</span>
+</span><span class='line'> <span class="p">});</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>here&rsquo;s the result</p>
+
+<p><img src="/images/mocha_pass.png"></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/01/26/embjerjs-is-a-more-than-just-model-view-controller/">EmbjerJS Is a More Than Just Model View Controller</a></h1>
     
     
@@ -98,7 +188,7 @@
   
 
 
-<time datetime="2014-01-26T07:21:31-05:00" pubdate data-updated="true">Jan 26<span>th</span>, 2014</time>
+<time datetime="2014-01-26T04:21:31-08:00" pubdate data-updated="true">Jan 26<span>th</span>, 2014</time>
         
       </p>
     
@@ -186,7 +276,7 @@ But it was the Controller that received all the form data. I needed to set the d
   
 
 
-<time datetime="2014-01-22T18:32:04-05:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2014</time>
+<time datetime="2014-01-22T15:32:04-08:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2014</time>
         
       </p>
     
@@ -231,7 +321,7 @@ But it was the Controller that received all the form data. I needed to set the d
   
 
 
-<time datetime="2014-01-22T18:09:45-05:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2014</time>
+<time datetime="2014-01-22T15:09:45-08:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2014</time>
         
       </p>
     
@@ -288,7 +378,7 @@ This way you could mimick the responses that you would get from a real backend. 
   
 
 
-<time datetime="2014-01-15T20:46:10-05:00" pubdate data-updated="true">Jan 15<span>th</span>, 2014</time>
+<time datetime="2014-01-15T17:46:10-08:00" pubdate data-updated="true">Jan 15<span>th</span>, 2014</time>
         
       </p>
     
@@ -349,7 +439,7 @@ This way you could mimick the responses that you would get from a real backend. 
   
 
 
-<time datetime="2014-01-07T19:27:32-05:00" pubdate data-updated="true">Jan 7<span>th</span>, 2014</time>
+<time datetime="2014-01-07T16:27:32-08:00" pubdate data-updated="true">Jan 7<span>th</span>, 2014</time>
         
       </p>
     
@@ -389,7 +479,7 @@ This way you could mimick the responses that you would get from a real backend. 
   
 
 
-<time datetime="2014-01-06T06:33:08-05:00" pubdate data-updated="true">Jan 6<span>th</span>, 2014</time>
+<time datetime="2014-01-06T03:33:08-08:00" pubdate data-updated="true">Jan 6<span>th</span>, 2014</time>
         
       </p>
     
@@ -447,7 +537,7 @@ index 45d8fc5..9e915cc 100644
   
 
 
-<time datetime="2014-01-06T05:47:47-05:00" pubdate data-updated="true">Jan 6<span>th</span>, 2014</time>
+<time datetime="2014-01-06T02:47:47-08:00" pubdate data-updated="true">Jan 6<span>th</span>, 2014</time>
         
       </p>
     
@@ -518,7 +608,7 @@ index 182c30b..f487980 100644
   
 
 
-<time datetime="2014-01-05T18:02:48-05:00" pubdate data-updated="true">Jan 5<span>th</span>, 2014</time>
+<time datetime="2014-01-05T15:02:48-08:00" pubdate data-updated="true">Jan 5<span>th</span>, 2014</time>
         
       </p>
     
@@ -546,6 +636,10 @@ index 182c30b..f487980 100644
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/16/testing-express-with-mocha/">Testing Express With Mocha</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/26/embjerjs-is-a-more-than-just-model-view-controller/">EmbjerJS Is a More Than Just Model View Controller</a>
       </li>
     
@@ -559,10 +653,6 @@ index 182c30b..f487980 100644
     
       <li class="post">
         <a href="/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig/">How to Cherry Pick Git Commit Using Tig</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/07/using-rails-composer/">Using Rails Composer</a>
       </li>
     
   </ul>

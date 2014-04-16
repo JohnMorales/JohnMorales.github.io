@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Errors | SiR by John Morales]]></title>
   <link href="http://JohnMorales.github.io/blog/categories/errors/atom.xml" rel="self"/>
   <link href="http://JohnMorales.github.io/"/>
-  <updated>2014-01-26T15:02:11-05:00</updated>
+  <updated>2014-04-16T15:55:09-07:00</updated>
   <id>http://JohnMorales.github.io/</id>
   <author>
     <name><![CDATA[John Morales]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Octopress You Have Already Activated Rake but Your Gemfile Requires Rake ... Prepending Bundler: Exec Needs a Command to Run to Your Command May Solve This.]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this/"/>
-    <updated>2014-01-06T05:47:47-05:00</updated>
+    <updated>2014-01-06T02:47:47-08:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this</id>
     <content type="html"><![CDATA[<p>Here I am setting up Octopress so that I could start blogging, and WHAM! I was immediately received with this error when I tried to run rake install</p>
 
