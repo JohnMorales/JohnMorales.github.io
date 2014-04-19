@@ -24,9 +24,9 @@ The message that I recieved from the conference was that we as IT professionals
 have the power to change companies. We need to fully embrace the idea of
 continous delivery (which admittely I need to learn more about). That the
 devops movement is a shift in how software is maintained and that the shift
-requires more transparency, acceptance and trust than just adding a new tool to
-due configuration management. I learned that it's about building trust in the
-process. Showing real success stories in baby steps so that everyone can
+requires more transparency, acceptance and trust than just adding a new
+'configuration management' tool.  I learned that it's about building trust in
+the process. Showing real success stories in baby steps so that everyone can
 realize the potential that we sell them in slide decks and proposals.
 
 Lastly the idea that we are all working together to make
@@ -35,7 +35,7 @@ that reduces the friction in changes we're able to respond faster and provide
 value.
 
 ## Call to action
-- Be a prohet of the devops movement.
+- Be a prophet of the devops movement.
 - Make sure I lead a healthy life, since unhealthy lives suck.
 - Read
    - [_Continous Delivery_](http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912)
