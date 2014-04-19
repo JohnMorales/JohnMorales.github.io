@@ -2,60 +2,64 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://JohnMorales.github.io/blog/2014/01/05/first-post/</loc>
-        <lastmod>2014-01-26T11:55:05-08:00</lastmod>
+        <lastmod>2014-01-26T14:55:05-05:00</lastmod>
     </url>
     <url>
         <loc>
             http://JohnMorales.github.io/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this/
         </loc>
-        <lastmod>2014-01-26T11:55:05-08:00</lastmod>
+        <lastmod>2014-01-26T14:55:05-05:00</lastmod>
     </url>
     <url>
         <loc>
             http://JohnMorales.github.io/blog/2014/01/06/octopress-how-to-switch-from-dark-color-in-code-snippets/
         </loc>
-        <lastmod>2014-01-26T11:55:05-08:00</lastmod>
+        <lastmod>2014-01-26T14:55:05-05:00</lastmod>
     </url>
     <url>
         <loc>http://JohnMorales.github.io/blog/2014/01/07/using-rails-composer/</loc>
-        <lastmod>2014-01-26T11:55:05-08:00</lastmod>
+        <lastmod>2014-01-26T14:55:05-05:00</lastmod>
     </url>
     <url>
         <loc>
             http://JohnMorales.github.io/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig/
         </loc>
-        <lastmod>2014-01-26T11:55:05-08:00</lastmod>
+        <lastmod>2014-01-26T14:55:05-05:00</lastmod>
     </url>
     <url>
         <loc>
             http://JohnMorales.github.io/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture/
         </loc>
-        <lastmod>2014-01-26T11:55:05-08:00</lastmod>
+        <lastmod>2014-01-26T14:55:05-05:00</lastmod>
     </url>
     <url>
         <loc>http://JohnMorales.github.io/blog/2014/01/22/using-rails-composer-followup/</loc>
-        <lastmod>2014-01-26T11:55:05-08:00</lastmod>
+        <lastmod>2014-01-26T14:55:05-05:00</lastmod>
     </url>
     <url>
         <loc>
             http://JohnMorales.github.io/blog/2014/01/26/embjerjs-is-a-more-than-just-model-view-controller/
         </loc>
-        <lastmod>2014-01-26T11:55:05-08:00</lastmod>
+        <lastmod>2014-01-26T14:55:05-05:00</lastmod>
     </url>
     <url>
         <loc>http://JohnMorales.github.io/blog/2014/04/16/testing-express-with-mocha/</loc>
-        <lastmod>2014-04-16T15:55:08-07:00</lastmod>
+        <lastmod>2014-04-16T18:55:08-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://JohnMorales.github.io/blog/2014/04/18/my-thoughts-of-chefconf-2014/</loc>
+        <lastmod>2014-04-19T11:54:02-04:00</lastmod>
     </url>
     <url>
         <loc>http://JohnMorales.github.io/blog/archives/</loc>
-        <lastmod>2014-04-16T15:55:08-07:00</lastmod>
+        <lastmod>2014-04-19T11:54:02-04:00</lastmod>
     </url>
     <url>
         <loc>http://JohnMorales.github.io/</loc>
-        <lastmod>2014-04-16T15:55:08-07:00</lastmod>
+        <lastmod>2014-04-19T11:54:02-04:00</lastmod>
     </url>
     <url>
         <loc>http://JohnMorales.github.io/robots.txt</loc>
-        <lastmod>2014-01-26T11:55:05-08:00</lastmod>
+        <lastmod>2014-01-26T14:55:05-05:00</lastmod>
     </url>
 </urlset>

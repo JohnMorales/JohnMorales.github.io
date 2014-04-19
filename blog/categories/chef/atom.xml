@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Chef, | SiR by John Morales]]></title>
+  <link href="http://JohnMorales.github.io/blog/categories/chef/atom.xml" rel="self"/>
+  <link href="http://JohnMorales.github.io/"/>
+  <updated>2014-04-19T11:54:02-04:00</updated>
+  <id>http://JohnMorales.github.io/</id>
+  <author>
+    <name><![CDATA[John Morales]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My Thoughts of ChefConf 2014]]></title>
+    <link href="http://JohnMorales.github.io/blog/2014/04/18/my-thoughts-of-chefconf-2014/"/>
+    <updated>2014-04-18T10:20:18-04:00</updated>
+    <id>http://JohnMorales.github.io/blog/2014/04/18/my-thoughts-of-chefconf-2014</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m sitting at the SFO airport trying to digest everything that I was exposed
+to after 3 intense days of Chef sessions and meeting the awesome chef
+community.</p>
+
+<h2>Community</h2>
+
+<p>One thing that I learned is that Chef as a company is cool and laid back. I was
+taken by surprise on how cool they are. After watching <a href="https://www.youtube.com/watch?v=0P0HD5pE-zU">Nathan Harvey&rsquo;s
+presentation</a> and then the open
+bar rock band show I realized how down to earth and funny they are. Even
+everyone that I met at all the hallway sessions were friends I hadn&rsquo;t met yet.
+I felt wow these guys are genuinely awesome. I was initially skeptical because
+I thought that everyone was a little too nice and friendly, but by the end I
+was convinced that this is an awesome community, that I&rsquo;m glad to be a part of.</p>
+
+<h2>Message</h2>
+
+<p>The message that I recieved from the conference was that we as IT professionals
+have the power to change companies. We need to fully embrace the idea of
+continous delivery (which admittely I need to learn more about). That the
+devops movement is a shift in how software is maintained and that the shift
+requires more transparency, acceptance and trust than just adding a new tool to
+due configuration management. I learned that it&rsquo;s about building trust in the
+process. Showing real success stories in baby steps so that everyone can
+realize the potential that we sell them in slide decks and proposals.</p>
+
+<p>Lastly the idea that we are all working together to make
+the software development process more delightful. By implementing a process
+that reduces the friction in changes we&rsquo;re able to respond faster and provide
+value.</p>
+
+<h2>Call to action</h2>
+
+<ul>
+<li>Be a prohet of the devops movement.</li>
+<li>Make sure I lead a healthy life, since unhealthy lives suck.</li>
+<li>Read
+
+<ul>
+<li><a href="http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912"><em>Continous Delivery</em></a></li>
+<li><a href="http://www.amazon.com/Phoenix-Project-DevOps-Helping-Business-ebook/dp/B00AZRBLHO/"><em>The Phoenix Project</em></a></li>
+<li><a href="http://www.amazon.com/Once-Future-King-T-H-White-ebook/dp/B00AEDDSQG"><em>The once and future king</em></a></li>
+<li><a href="http://www.amazon.com/Hard-Thing-About-Things-Building-ebook/dp/B00DQ845EA/"><em>The hard thing about hard things</em></a></li>
+<li><a href="http://www.amazon.com/Practical-Approach-Large-Scale-Agile-Development/dp/0321821726"><em>A pratical approach to Large Scale Agile Development</em></a></li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

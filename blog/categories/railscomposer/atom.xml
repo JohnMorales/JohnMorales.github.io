@@ -4,7 +4,7 @@
   <title><![CDATA[Category: RailsComposer | SiR by John Morales]]></title>
   <link href="http://JohnMorales.github.io/blog/categories/railscomposer/atom.xml" rel="self"/>
   <link href="http://JohnMorales.github.io/"/>
-  <updated>2014-04-16T15:55:09-07:00</updated>
+  <updated>2014-04-19T11:54:02-04:00</updated>
   <id>http://JohnMorales.github.io/</id>
   <author>
     <name><![CDATA[John Morales]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Using Rails Composer -- Followup]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/22/using-rails-composer-followup/"/>
-    <updated>2014-01-22T15:32:04-08:00</updated>
+    <updated>2014-01-22T18:32:04-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/22/using-rails-composer-followup</id>
     <content type="html"><![CDATA[<p>I just wanted to follow up on using rails composer. After speaking with <a href="http://ryan.mcgeary.org/">Ryan McGeary</a>, I&rsquo;ve since decided that using rails composer wasn&rsquo;t the right tool for this job.</p>
 

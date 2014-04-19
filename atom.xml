@@ -4,7 +4,7 @@
   <title><![CDATA[SiR by John Morales]]></title>
   <link href="http://JohnMorales.github.io/atom.xml" rel="self"/>
   <link href="http://JohnMorales.github.io/"/>
-  <updated>2014-04-16T15:55:09-07:00</updated>
+  <updated>2014-04-19T11:54:02-04:00</updated>
   <id>http://JohnMorales.github.io/</id>
   <author>
     <name><![CDATA[John Morales]]></name>
@@ -14,9 +14,65 @@
 
   
   <entry>
+    <title type="html"><![CDATA[My Thoughts of ChefConf 2014]]></title>
+    <link href="http://JohnMorales.github.io/blog/2014/04/18/my-thoughts-of-chefconf-2014/"/>
+    <updated>2014-04-18T10:20:18-04:00</updated>
+    <id>http://JohnMorales.github.io/blog/2014/04/18/my-thoughts-of-chefconf-2014</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m sitting at the SFO airport trying to digest everything that I was exposed
+to after 3 intense days of Chef sessions and meeting the awesome chef
+community.</p>
+
+<h2>Community</h2>
+
+<p>One thing that I learned is that Chef as a company is cool and laid back. I was
+taken by surprise on how cool they are. After watching <a href="https://www.youtube.com/watch?v=0P0HD5pE-zU">Nathan Harvey&rsquo;s
+presentation</a> and then the open
+bar rock band show I realized how down to earth and funny they are. Even
+everyone that I met at all the hallway sessions were friends I hadn&rsquo;t met yet.
+I felt wow these guys are genuinely awesome. I was initially skeptical because
+I thought that everyone was a little too nice and friendly, but by the end I
+was convinced that this is an awesome community, that I&rsquo;m glad to be a part of.</p>
+
+<h2>Message</h2>
+
+<p>The message that I recieved from the conference was that we as IT professionals
+have the power to change companies. We need to fully embrace the idea of
+continous delivery (which admittely I need to learn more about). That the
+devops movement is a shift in how software is maintained and that the shift
+requires more transparency, acceptance and trust than just adding a new tool to
+due configuration management. I learned that it&rsquo;s about building trust in the
+process. Showing real success stories in baby steps so that everyone can
+realize the potential that we sell them in slide decks and proposals.</p>
+
+<p>Lastly the idea that we are all working together to make
+the software development process more delightful. By implementing a process
+that reduces the friction in changes we&rsquo;re able to respond faster and provide
+value.</p>
+
+<h2>Call to action</h2>
+
+<ul>
+<li>Be a prohet of the devops movement.</li>
+<li>Make sure I lead a healthy life, since unhealthy lives suck.</li>
+<li>Read
+
+<ul>
+<li><a href="http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912"><em>Continous Delivery</em></a></li>
+<li><a href="http://www.amazon.com/Phoenix-Project-DevOps-Helping-Business-ebook/dp/B00AZRBLHO/"><em>The Phoenix Project</em></a></li>
+<li><a href="http://www.amazon.com/Once-Future-King-T-H-White-ebook/dp/B00AEDDSQG"><em>The once and future king</em></a></li>
+<li><a href="http://www.amazon.com/Hard-Thing-About-Things-Building-ebook/dp/B00DQ845EA/"><em>The hard thing about hard things</em></a></li>
+<li><a href="http://www.amazon.com/Practical-Approach-Large-Scale-Agile-Development/dp/0321821726"><em>A pratical approach to Large Scale Agile Development</em></a></li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Testing Express With Mocha]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/04/16/testing-express-with-mocha/"/>
-    <updated>2014-04-16T06:13:11-07:00</updated>
+    <updated>2014-04-16T09:13:11-04:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/04/16/testing-express-with-mocha</id>
     <content type="html"><![CDATA[<p>Even though this post doesn&rsquo;t technically have anything to do with Mocha, I&rsquo;m
 mentioning it in the title because I was using Mocha, but Mocha has a gap of
@@ -78,7 +134,7 @@ and confirmed that he is using supertest to test their http interactions.</p>
   <entry>
     <title type="html"><![CDATA[EmbjerJS Is a More Than Just Model View Controller]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/26/embjerjs-is-a-more-than-just-model-view-controller/"/>
-    <updated>2014-01-26T04:21:31-08:00</updated>
+    <updated>2014-01-26T07:21:31-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/26/embjerjs-is-a-more-than-just-model-view-controller</id>
     <content type="html"><![CDATA[<p>I&rsquo;m learning EmbjerJS, and it&rsquo;s a great framework. One of the things that I struggled with is that I thought it was a vanilla MVC javascript framework.
 I said OK, I know MVC so this is great..then I read a few docs about how Ember view binding works and tried to create a quick prototype.
@@ -139,7 +195,7 @@ But it was the Controller that received all the form data. I needed to set the d
   <entry>
     <title type="html"><![CDATA[Using Rails Composer -- Followup]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/22/using-rails-composer-followup/"/>
-    <updated>2014-01-22T15:32:04-08:00</updated>
+    <updated>2014-01-22T18:32:04-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/22/using-rails-composer-followup</id>
     <content type="html"><![CDATA[<p>I just wanted to follow up on using rails composer. After speaking with <a href="http://ryan.mcgeary.org/">Ryan McGeary</a>, I&rsquo;ve since decided that using rails composer wasn&rsquo;t the right tool for this job.</p>
 
@@ -157,7 +213,7 @@ But it was the Controller that received all the form data. I needed to set the d
   <entry>
     <title type="html"><![CDATA[EmberJS: The Id Property Must Be Defined as a Number or String for Fixture]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture/"/>
-    <updated>2014-01-22T15:09:45-08:00</updated>
+    <updated>2014-01-22T18:09:45-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture</id>
     <content type="html"><![CDATA[<p>I&rsquo;m creating my first application using EmberJS and I recieved the following error:</p>
 
@@ -187,7 +243,7 @@ This way you could mimick the responses that you would get from a real backend. 
   <entry>
     <title type="html"><![CDATA[How to Cherry Pick Git Commit Using Tig]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig/"/>
-    <updated>2014-01-15T17:46:10-08:00</updated>
+    <updated>2014-01-15T20:46:10-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig</id>
     <content type="html"><![CDATA[<h2>The problem</h2>
 
@@ -221,7 +277,7 @@ This way you could mimick the responses that you would get from a real backend. 
   <entry>
     <title type="html"><![CDATA[Using Rails Composer]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/07/using-rails-composer/"/>
-    <updated>2014-01-07T16:27:32-08:00</updated>
+    <updated>2014-01-07T19:27:32-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/07/using-rails-composer</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve decided to use rails composer for an app that I&rsquo;m building. For those that don&rsquo;t know <a href="http://railsapps.github.io/rails-composer/">rails composer is &ldquo;like the Rails generator on steroids.&rdquo;</a></p>
 
@@ -234,7 +290,7 @@ This way you could mimick the responses that you would get from a real backend. 
   <entry>
     <title type="html"><![CDATA[Octopress How to Switch From Dark Color in Code Snippets]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/06/octopress-how-to-switch-from-dark-color-in-code-snippets/"/>
-    <updated>2014-01-06T03:33:08-08:00</updated>
+    <updated>2014-01-06T06:33:08-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/06/octopress-how-to-switch-from-dark-color-in-code-snippets</id>
     <content type="html"><![CDATA[<p>Octopress comes &lsquo;out of the box&rsquo; so to speak with two solarized colorschemes. The default is dark, changing it to light is as simple as this:</p>
 
@@ -265,7 +321,7 @@ index 45d8fc5..9e915cc 100644
   <entry>
     <title type="html"><![CDATA[Octopress You Have Already Activated Rake but Your Gemfile Requires Rake ... Prepending Bundler: Exec Needs a Command to Run to Your Command May Solve This.]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this/"/>
-    <updated>2014-01-06T02:47:47-08:00</updated>
+    <updated>2014-01-06T05:47:47-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this</id>
     <content type="html"><![CDATA[<p>Here I am setting up Octopress so that I could start blogging, and WHAM! I was immediately received with this error when I tried to run rake install</p>
 
@@ -309,7 +365,7 @@ index 182c30b..f487980 100644
   <entry>
     <title type="html"><![CDATA[First Post]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/05/first-post/"/>
-    <updated>2014-01-05T15:02:48-08:00</updated>
+    <updated>2014-01-05T18:02:48-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/05/first-post</id>
     <content type="html"><![CDATA[<p>Hello Internet! I&rsquo;m starting to blog again and hopefully this time I can be consistent.</p>
 ]]></content>
