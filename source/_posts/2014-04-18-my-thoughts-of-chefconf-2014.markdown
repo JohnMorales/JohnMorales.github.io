@@ -11,7 +11,7 @@ community.
 
 ## Community
 One thing that I learned is that Chef as a company is cool and laid back. I was
-taken by surprise on how cool they are. After watching [Nathan Harvey's
+taken by surprise on how cool they are. After watching [Nathen Harvey's
 presentation](https://www.youtube.com/watch?v=0P0HD5pE-zU) and then the open
 bar rock band show I realized how down to earth and funny they are. Even
 everyone that I met at all the hallway sessions were friends I hadn't met yet.
