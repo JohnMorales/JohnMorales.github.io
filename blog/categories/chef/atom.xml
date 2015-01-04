@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Chef, | SiR by John Morales]]></title>
   <link href="http://JohnMorales.github.io/blog/categories/chef/atom.xml" rel="self"/>
   <link href="http://JohnMorales.github.io/"/>
-  <updated>2014-04-19T12:13:26-04:00</updated>
+  <updated>2015-01-04T18:14:21-05:00</updated>
   <id>http://JohnMorales.github.io/</id>
   <author>
     <name><![CDATA[John Morales]]></name>
@@ -14,7 +14,47 @@
 
   
   <entry>
-    <title type="html"><![CDATA[My Thoughts of ChefConf 2014]]></title>
+    <title type="html"><![CDATA[reviewing the opsworks cookbooks]]></title>
+    <link href="http://JohnMorales.github.io/blog/2014/04/20/reviewing-the-opsworks-cookbooks/"/>
+    <updated>2014-04-20T16:26:35-04:00</updated>
+    <id>http://JohnMorales.github.io/blog/2014/04/20/reviewing-the-opsworks-cookbooks</id>
+    <content type="html"><![CDATA[<p>The most important thing when using OpsWorks if you come from a Chef Server
+background is that its a fundamental shift in configuration management. The
+traditional chef model is that the nodes always converge to the state defined
+by the runlist. The client should poll for changes to the runlist or the recipe
+list that is expanded to by the runlist. In the opsworks model, the clients are
+not expected to poll for changes. Instead they are notified to converge to
+specific states based on a few key events. So fundamentally the model is a push
+instead of a pull.</p>
+
+<p>In these events there are a few opsworks recipes that are run. There is no way
+to not run them. After the OpsWorks cookbooks run then you have the opportunity
+to provide your own custom cookbooks. In addition you can use a feature of Chef
+that I was not aware of. You can override a AWS provided template or attribute in
+your cookbook. <em>Note that you cannot override a recipe.</em></p>
+
+<p>After reviewing the AWS OpsWorks documentation I head over to the opensource cookbooks:
+The first thing I notice is that the documentation in the source code is sparse. I start with the Rakefile</p>
+
+<h2>Rakefile</h2>
+
+<p>The rakefile contains a suite of custom line based validators for coding standards.</p>
+
+<p>task validate_literal_include:
+  goes through all the ruby files and makes sure that it can find any recipes that are included.
+task validate_attribute_dependencies
+  goes through each attribute and checks for attribute references and include attribute references, makes sure that they true up. Seems useful.
+task validate_syntax
+  runs ruby -c on every ruby file.. also useful
+task validate_best_pactrise
+  runs foodcritic linter on the whole project
+task validate_customize
+  Every cookbook should include an customize.rb attribute?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My thoughts of ChefConf 2014]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/04/18/my-thoughts-of-chefconf-2014/"/>
     <updated>2014-04-18T10:20:18-04:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/04/18/my-thoughts-of-chefconf-2014</id>

@@ -4,7 +4,7 @@
   <title><![CDATA[SiR by John Morales]]></title>
   <link href="http://JohnMorales.github.io/atom.xml" rel="self"/>
   <link href="http://JohnMorales.github.io/"/>
-  <updated>2014-04-19T12:13:26-04:00</updated>
+  <updated>2015-01-04T18:14:21-05:00</updated>
   <id>http://JohnMorales.github.io/</id>
   <author>
     <name><![CDATA[John Morales]]></name>
@@ -14,10 +14,57 @@
 
   
   <entry>
-    <title type="html"><![CDATA[My Thoughts of ChefConf 2014]]></title>
+    
+    <title type="html"><![CDATA[reviewing the opsworks cookbooks]]></title>
+    <link href="http://JohnMorales.github.io/blog/2014/04/20/reviewing-the-opsworks-cookbooks/"/>
+    
+    <updated>2014-04-20T16:26:35-04:00</updated>
+    <id>http://JohnMorales.github.io/blog/2014/04/20/reviewing-the-opsworks-cookbooks</id>
+    
+    <content type="html"><![CDATA[<p>The most important thing when using OpsWorks if you come from a Chef Server
+background is that its a fundamental shift in configuration management. The
+traditional chef model is that the nodes always converge to the state defined
+by the runlist. The client should poll for changes to the runlist or the recipe
+list that is expanded to by the runlist. In the opsworks model, the clients are
+not expected to poll for changes. Instead they are notified to converge to
+specific states based on a few key events. So fundamentally the model is a push
+instead of a pull.</p>
+
+<p>In these events there are a few opsworks recipes that are run. There is no way
+to not run them. After the OpsWorks cookbooks run then you have the opportunity
+to provide your own custom cookbooks. In addition you can use a feature of Chef
+that I was not aware of. You can override a AWS provided template or attribute in
+your cookbook. <em>Note that you cannot override a recipe.</em></p>
+
+<p>After reviewing the AWS OpsWorks documentation I head over to the opensource cookbooks:
+The first thing I notice is that the documentation in the source code is sparse. I start with the Rakefile</p>
+
+<h2>Rakefile</h2>
+
+<p>The rakefile contains a suite of custom line based validators for coding standards.</p>
+
+<p>task validate_literal_include:
+  goes through all the ruby files and makes sure that it can find any recipes that are included.
+task validate_attribute_dependencies
+  goes through each attribute and checks for attribute references and include attribute references, makes sure that they true up. Seems useful.
+task validate_syntax
+  runs ruby -c on every ruby file.. also useful
+task validate_best_pactrise
+  runs foodcritic linter on the whole project
+task validate_customize
+  Every cookbook should include an customize.rb attribute?</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[My thoughts of ChefConf 2014]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/04/18/my-thoughts-of-chefconf-2014/"/>
+    
     <updated>2014-04-18T10:20:18-04:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/04/18/my-thoughts-of-chefconf-2014</id>
+    
     <content type="html"><![CDATA[<p>I&rsquo;m sitting at the SFO airport trying to digest everything that I was exposed
 to after 3 intense days of Chef sessions and meeting the awesome chef
 community.</p>
@@ -67,13 +114,17 @@ value.</p>
 </ul>
 
 ]]></content>
+    
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Testing Express With Mocha]]></title>
+    
+    <title type="html"><![CDATA[Testing express with mocha]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/04/16/testing-express-with-mocha/"/>
+    
     <updated>2014-04-16T09:13:11-04:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/04/16/testing-express-with-mocha</id>
+    
     <content type="html"><![CDATA[<p>Even though this post doesn&rsquo;t technically have anything to do with Mocha, I&rsquo;m
 mentioning it in the title because I was using Mocha, but Mocha has a gap of
 features when it comes to testing http interactions. You need to augment it
@@ -129,13 +180,17 @@ and confirmed that he is using supertest to test their http interactions.</p>
 
 <p><img src="http://JohnMorales.github.io/images/mocha_pass.png"></p>
 ]]></content>
+    
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[EmbjerJS Is a More Than Just Model View Controller]]></title>
+    
+    <title type="html"><![CDATA[EmbjerJS is a more than just Model View Controller]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/26/embjerjs-is-a-more-than-just-model-view-controller/"/>
+    
     <updated>2014-01-26T07:21:31-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/26/embjerjs-is-a-more-than-just-model-view-controller</id>
+    
     <content type="html"><![CDATA[<p>I&rsquo;m learning EmbjerJS, and it&rsquo;s a great framework. One of the things that I struggled with is that I thought it was a vanilla MVC javascript framework.
 I said OK, I know MVC so this is great..then I read a few docs about how Ember view binding works and tried to create a quick prototype.
 I could not get a simple form post working. Why?</p>
@@ -190,13 +245,17 @@ But it was the Controller that received all the form data. I needed to set the d
 
 <p>I hope this helps someone understand EmberJS better as it did for me..</p>
 ]]></content>
+    
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Using Rails Composer -- Followup]]></title>
+    
+    <title type="html"><![CDATA[Using Rails Composer -- followup]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/22/using-rails-composer-followup/"/>
+    
     <updated>2014-01-22T18:32:04-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/22/using-rails-composer-followup</id>
+    
     <content type="html"><![CDATA[<p>I just wanted to follow up on using rails composer. After speaking with <a href="http://ryan.mcgeary.org/">Ryan McGeary</a>, I&rsquo;ve since decided that using rails composer wasn&rsquo;t the right tool for this job.</p>
 
 <ul>
@@ -208,13 +267,17 @@ But it was the Controller that received all the form data. I needed to set the d
 </ul>
 
 ]]></content>
+    
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[EmberJS: The Id Property Must Be Defined as a Number or String for Fixture]]></title>
+    
+    <title type="html"><![CDATA[EmberJS: the id property must be defined as a number or string for fixture]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture/"/>
+    
     <updated>2014-01-22T18:09:45-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/22/emberjs-the-id-property-must-be-defined-as-a-number-or-string-for-fixture</id>
+    
     <content type="html"><![CDATA[<p>I&rsquo;m creating my first application using EmberJS and I recieved the following error:</p>
 
 <p><code>the id property must be defined as a number or string for fixture</code>.</p>
@@ -238,13 +301,17 @@ This way you could mimick the responses that you would get from a real backend. 
 
 <p>Thanks to jkarsrud on freenode#emberjs for his help.</p>
 ]]></content>
+    
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Cherry Pick Git Commit Using Tig]]></title>
+    
+    <title type="html"><![CDATA[How to cherry pick git commit using Tig]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig/"/>
+    
     <updated>2014-01-15T20:46:10-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/15/how-to-cherry-pick-git-commit-using-tig</id>
+    
     <content type="html"><![CDATA[<h2>The problem</h2>
 
 <p>Recently I needed to grab a commit that was on a release branch and bring it over to the master branch. We weren&rsquo;t ready to merge the whole branch and but I needed a specific commit.</p>
@@ -272,26 +339,34 @@ This way you could mimick the responses that you would get from a real backend. 
 
 <p>the commit should now be on master <code>git push origin</code> to push the change.</p>
 ]]></content>
+    
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Using Rails Composer]]></title>
+    
+    <title type="html"><![CDATA[using rails composer]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/07/using-rails-composer/"/>
+    
     <updated>2014-01-07T19:27:32-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/07/using-rails-composer</id>
+    
     <content type="html"><![CDATA[<p>I&rsquo;ve decided to use rails composer for an app that I&rsquo;m building. For those that don&rsquo;t know <a href="http://railsapps.github.io/rails-composer/">rails composer is &ldquo;like the Rails generator on steroids.&rdquo;</a></p>
 
 <p>I looked at a few generators and most of them were old, but it was a toss up with rails composer and <a href="https://github.com/thoughtbot/suspenders">suspenders</a>. I ended up choosing rails composer but I haven&rsquo;t done a pros and cons evaluation between them.</p>
 
 <p>Stay tuned for my review on using rails composer.</p>
 ]]></content>
+    
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Octopress How to Switch From Dark Color in Code Snippets]]></title>
+    
+    <title type="html"><![CDATA[Octopress how to switch from dark color in code snippets]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/06/octopress-how-to-switch-from-dark-color-in-code-snippets/"/>
+    
     <updated>2014-01-06T06:33:08-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/06/octopress-how-to-switch-from-dark-color-in-code-snippets</id>
+    
     <content type="html"><![CDATA[<p>Octopress comes &lsquo;out of the box&rsquo; so to speak with two solarized colorschemes. The default is dark, changing it to light is as simple as this:</p>
 
 <div><script src='https://gist.github.com/8281532.js'></script>
@@ -316,13 +391,17 @@ index 45d8fc5..9e915cc 100644
 
 
 ]]></content>
+    
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Octopress You Have Already Activated Rake but Your Gemfile Requires Rake ... Prepending Bundler: Exec Needs a Command to Run to Your Command May Solve This.]]></title>
+    
+    <title type="html"><![CDATA[Octopress You have already activated rake but your Gemfile requires rake ... Prepending bundler: exec needs a command to run to your command may solve this.]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this/"/>
+    
     <updated>2014-01-06T05:47:47-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this</id>
+    
     <content type="html"><![CDATA[<p>Here I am setting up Octopress so that I could start blogging, and WHAM! I was immediately received with this error when I tried to run rake install</p>
 
 <p><code>You have already activated rake but your Gemfile requires rake 0.9.2.2. Prepending `bundle exec` to your command may solve this.</code></p>
@@ -360,15 +439,20 @@ index 182c30b..f487980 100644
 
 <p>Or if you&rsquo;re running rake 0.9.6 you can just apply this patch.</p>
 ]]></content>
+    
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[First Post]]></title>
+    
+    <title type="html"><![CDATA[first post]]></title>
     <link href="http://JohnMorales.github.io/blog/2014/01/05/first-post/"/>
+    
     <updated>2014-01-05T18:02:48-05:00</updated>
     <id>http://JohnMorales.github.io/blog/2014/01/05/first-post</id>
+    
     <content type="html"><![CDATA[<p>Hello Internet! I&rsquo;m starting to blog again and hopefully this time I can be consistent.</p>
 ]]></content>
+    
   </entry>
   
 </feed>
