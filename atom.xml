@@ -4,55 +4,26 @@
   <title><![CDATA[SiR by John Morales]]></title>
   <link href="http://JohnMorales.github.io/atom.xml" rel="self"/>
   <link href="http://JohnMorales.github.io/"/>
-  <updated>2015-01-04T18:14:21-05:00</updated>
+  <updated>2015-01-05T07:46:50-05:00</updated>
   <id>http://JohnMorales.github.io/</id>
   <author>
     <name><![CDATA[John Morales]]></name>
-    
+    <email><![CDATA[jmorales@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
     
-    <title type="html"><![CDATA[reviewing the opsworks cookbooks]]></title>
-    <link href="http://JohnMorales.github.io/blog/2014/04/20/reviewing-the-opsworks-cookbooks/"/>
+    <title type="html"><![CDATA[Starting again]]></title>
+    <link href="http://JohnMorales.github.io/blog/2015/01/05/starting-again/"/>
     
-    <updated>2014-04-20T16:26:35-04:00</updated>
-    <id>http://JohnMorales.github.io/blog/2014/04/20/reviewing-the-opsworks-cookbooks</id>
+    <updated>2015-01-05T06:40:26-05:00</updated>
+    <id>http://JohnMorales.github.io/blog/2015/01/05/starting-again</id>
     
-    <content type="html"><![CDATA[<p>The most important thing when using OpsWorks if you come from a Chef Server
-background is that its a fundamental shift in configuration management. The
-traditional chef model is that the nodes always converge to the state defined
-by the runlist. The client should poll for changes to the runlist or the recipe
-list that is expanded to by the runlist. In the opsworks model, the clients are
-not expected to poll for changes. Instead they are notified to converge to
-specific states based on a few key events. So fundamentally the model is a push
-instead of a pull.</p>
-
-<p>In these events there are a few opsworks recipes that are run. There is no way
-to not run them. After the OpsWorks cookbooks run then you have the opportunity
-to provide your own custom cookbooks. In addition you can use a feature of Chef
-that I was not aware of. You can override a AWS provided template or attribute in
-your cookbook. <em>Note that you cannot override a recipe.</em></p>
-
-<p>After reviewing the AWS OpsWorks documentation I head over to the opensource cookbooks:
-The first thing I notice is that the documentation in the source code is sparse. I start with the Rakefile</p>
-
-<h2>Rakefile</h2>
-
-<p>The rakefile contains a suite of custom line based validators for coding standards.</p>
-
-<p>task validate_literal_include:
-  goes through all the ruby files and makes sure that it can find any recipes that are included.
-task validate_attribute_dependencies
-  goes through each attribute and checks for attribute references and include attribute references, makes sure that they true up. Seems useful.
-task validate_syntax
-  runs ruby -c on every ruby file.. also useful
-task validate_best_pactrise
-  runs foodcritic linter on the whole project
-task validate_customize
-  Every cookbook should include an customize.rb attribute?</p>
+    <content type="html"><![CDATA[<p>It&rsquo;s a little cliche that I&rsquo;m starting to blog again exactly the same time I tried this last year, which just so happens to fall in right after the new years.
+But I promise it&rsquo;s not a resolution or anything ;) I think part of the problem was that I was drinking from a firehose for the better part of last year since I switched over to be a contractor.
+Now I think I should be in a better place where I can devote time to writing.</p>
 ]]></content>
     
   </entry>

@@ -9,8 +9,7 @@
   <meta name="author" content="John Morales">
 
   
-  <meta name="description" content="The most important thing when using OpsWorks if you come from a Chef Server
-background is that its a fundamental shift in configuration management. &hellip;">
+  <meta name="description" content="It&rsquo;s a little cliche that I&rsquo;m starting to blog again exactly the same time I tried this last year, which just so happens to fall in right &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,7 +65,6 @@ background is that its a fundamental shift in configuration management. &hellip;
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/about">About</a></li>
 </ul>
 
 </nav>
@@ -81,7 +79,7 @@ background is that its a fundamental shift in configuration management. &hellip;
   <header>
   
     
-      <h1 class="entry-title"><a href="/blog/2014/04/20/reviewing-the-opsworks-cookbooks/">Reviewing the Opsworks Cookbooks</a></h1>
+      <h1 class="entry-title"><a href="/blog/2015/01/05/starting-again/">Starting Again</a></h1>
       
       
     
@@ -98,45 +96,16 @@ background is that its a fundamental shift in configuration management. &hellip;
   
 
 
-<time datetime="2014-04-20T16:26:35-04:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time>
+<time datetime="2015-01-05T06:40:26-05:00" pubdate data-updated="true">Jan 5<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>The most important thing when using OpsWorks if you come from a Chef Server
-background is that its a fundamental shift in configuration management. The
-traditional chef model is that the nodes always converge to the state defined
-by the runlist. The client should poll for changes to the runlist or the recipe
-list that is expanded to by the runlist. In the opsworks model, the clients are
-not expected to poll for changes. Instead they are notified to converge to
-specific states based on a few key events. So fundamentally the model is a push
-instead of a pull.</p>
-
-<p>In these events there are a few opsworks recipes that are run. There is no way
-to not run them. After the OpsWorks cookbooks run then you have the opportunity
-to provide your own custom cookbooks. In addition you can use a feature of Chef
-that I was not aware of. You can override a AWS provided template or attribute in
-your cookbook. <em>Note that you cannot override a recipe.</em></p>
-
-<p>After reviewing the AWS OpsWorks documentation I head over to the opensource cookbooks:
-The first thing I notice is that the documentation in the source code is sparse. I start with the Rakefile</p>
-
-<h2>Rakefile</h2>
-
-<p>The rakefile contains a suite of custom line based validators for coding standards.</p>
-
-<p>task validate_literal_include:
-  goes through all the ruby files and makes sure that it can find any recipes that are included.
-task validate_attribute_dependencies
-  goes through each attribute and checks for attribute references and include attribute references, makes sure that they true up. Seems useful.
-task validate_syntax
-  runs ruby -c on every ruby file.. also useful
-task validate_best_pactrise
-  runs foodcritic linter on the whole project
-task validate_customize
-  Every cookbook should include an customize.rb attribute?</p>
+  <div class="entry-content"><p>It&rsquo;s a little cliche that I&rsquo;m starting to blog again exactly the same time I tried this last year, which just so happens to fall in right after the new years.
+But I promise it&rsquo;s not a resolution or anything ;) I think part of the problem was that I was drinking from a firehose for the better part of last year since I switched over to be a contractor.
+Now I think I should be in a better place where I can devote time to writing.</p>
 </div>
   
   
@@ -769,7 +738,7 @@ index 182c30b..f487980 100644
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/04/20/reviewing-the-opsworks-cookbooks/">reviewing the opsworks cookbooks</a>
+        <a href="/blog/2015/01/05/starting-again/">Starting again</a>
       </li>
     
       <li class="post">
