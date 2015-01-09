@@ -9,7 +9,8 @@
   <meta name="author" content="John Morales">
 
   
-  <meta name="description" content="It&rsquo;s a little cliche that I&rsquo;m starting to blog again exactly the same time I tried this last year, which just so happens to fall in right &hellip;">
+  <meta name="description" content="I&rsquo;ve been using base16 as my terminal color scheme for a while now, I used to
+use solarized. I&rsquo;ve been pleased with the results. Over all &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -72,6 +73,146 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2015/01/09/base16-shell-tmux-vim-color-switching-dead-simple/">Base16 Shell Tmux Vim Color Switching Dead Simple</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-09T08:10:20-05:00" pubdate data-updated="true">Jan 9<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;ve been using base16 as my terminal color scheme for a while now, I used to
+use solarized. I&rsquo;ve been pleased with the results.  Over all the base 16 suite
+is a great looking set of themes that works well in the shell and in vim.
+<a href="https://github.com/chriskempson">Chris</a> has done a great job on it.</p>
+
+<p>One of the issues that I&rsquo;ve had is my setup was theme specific, meaning after I
+chose a theme, I was committed and switching colorschemes mid-coding session was
+painful. There were ad-hoc times where the visibility of a light theme was
+crucial to taking pride of my environment. Basically:</p>
+
+<h2>Dark themes + shitty projectors == :(</h2>
+
+<p>Typically I use a dark theme, but when I have do an ad-hoc presentation or
+someone comes over to pair program, it&rsquo;s easier on the eyes to use a light
+theme.</p>
+
+<h2>Attempt 1: iTerm Profiles + Environment variables</h2>
+
+<p>Intially I created dedicated iTerm profiles so that I can
+<a href="https://github.com/chriskempson/base16-iterm2"><strong>import</strong></a> the correct
+colorscheme which would set the 16 ansi colors to the exact color. I had my
+<code>.bashrc</code> and <code>.vimrc</code> check the <strong>ITERM_PROFILE</strong> setting provided by iTerm to set the
+proper themes in tmux and vim. The
+solution roughly consisted of the following:</p>
+
+<ol>
+<li>Manually Create a new iTerm profile titled with the name of the base16 theme
+I wanted to use. e.g. <code>base16-default.dark</code></li>
+<li>Manually update my bashrc to include logic to source the right iterm-shell
+init script. The bashrc would also tell tmux to source the right color
+schemes.</li>
+<li>Manually update my vimrc to set the right colorscheme and background
+accordingly</li>
+</ol>
+
+
+<p>While this worked for the most part, it required creating a new iTerm and was
+pretty kludgy overall.</p>
+
+<p>The <strong>biggest problem</strong> was that switching profiles wouldn&rsquo;t change the
+ITERM_PROFILE environment variable in tmux. Since tmux is a client/server app
+it would hold on to the ITERM_PROFILE that was initially used when the tmux
+server was created. Therefore creating new tmux shells would have the original
+theme not the latest.</p>
+
+<h2>Attempt 2: (Current solution) auto-generated bash functions</h2>
+
+<p>I created a <code>profiler_helper.sh</code> that will automatically create
+<code>base16_{theme}_{dark|light}</code> functions that will quickly switch to that theme.
+in addition the functions will create <code>~/.vimrc_background</code> and <code>~/.base16_theme</code>
+files. These files allow the following:</p>
+
+<ul>
+<li>the <code>.vimrc_background</code> file will configure vim to use the latest use base16 profile.</li>
+<li>the <code>.base16_theme</code> is a soft link to the latest activated theme so that it
+can be sourced newly created shell</li>
+</ul>
+
+
+<h3>In action</h3>
+
+<p><img src="https://s3.amazonaws.com/johnmorales_blog/base16_profile_helpers.gif"></p>
+
+<h3>Super quick setup:</h3>
+
+<ol>
+<li>Until I convince <a href="https://github.com/chriskempson">Chris</a> to include this in his project, clone my fork</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone https://github.com/JohnMorales/base16-shell</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Add the following to your bashrc <em>(change the location to match where you&rsquo;ve cloned the base-16 shell)</em>:</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>if [ -n "$PS1" ]; then # if statement guards adding these helpers for non-interative shells
+</span><span class='line'>  eval "$(~/Development/base-16/shell/profile_helper.sh)"
+</span><span class='line'>fi</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Add the following to your vimrc:</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>if filereadable(expand("~/.vimrc_background"))
+</span><span class='line'>  let base16colorspace=256
+</span><span class='line'>  source ~/.vimrc_background
+</span><span class='line'>endif</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Quick and painless color switching, Enjoy.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -650,79 +791,6 @@ index 45d8fc5..9e915cc 100644
 
     </article>
   
-  
-    <article>
-      
-  <header>
-  
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/06/octopress-you-have-already-activated-rake-but-your-gemfile-requires-rake-dot-dot-dot-prepending-bundler-exec-needs-a-command-to-run-to-your-command-may-solve-this/">Octopress You Have Already Activated Rake but Your Gemfile Requires Rake &#8230; Prepending Bundler: Exec Needs a Command to Run to Your Command May Solve This.</a></h1>
-      
-      
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-06T05:47:47-05:00" pubdate data-updated="true">Jan 6<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Here I am setting up Octopress so that I could start blogging, and WHAM! I was immediately received with this error when I tried to run rake install</p>
-
-<p><code>You have already activated rake but your Gemfile requires rake 0.9.2.2. Prepending `bundle exec` to your command may solve this.</code></p>
-
-<p>This can be solved simply by changing the Gemfile.lock, changing the version Rake to the version that you have installed:</p>
-
-<div><script src='https://gist.github.com/8281230.js'></script>
-<noscript><pre><code>From 4694737d7a17db39283d0fc614359777472df217 Mon Sep 17 00:00:00 2001
-From: JohnMorales &lt;jmorales@gmail.com&gt;
-Date: Mon, 6 Jan 2014 05:50:02 -0500
-Subject: [PATCH] Fixing rake issue
-
----
- Gemfile.lock | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-diff --git a/Gemfile.lock b/Gemfile.lock
-index 182c30b..f487980 100644
---- a/Gemfile.lock
-+++ b/Gemfile.lock
-@@ -31,7 +31,7 @@ GEM
-     rack (1.5.2)
-     rack-protection (1.5.0)
-       rack
--    rake (0.9.2.2)
-+    rake (0.9.6)
-     rb-fsevent (0.9.1)
-     rdiscount (2.0.7.3)
-     rubypants (0.2.0)
--- 
-1.8.4.2
-
-</code></pre></noscript></div>
-
-
-<p>Or if you&rsquo;re running rake 0.9.6 you can just apply this patch.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -738,6 +806,10 @@ index 182c30b..f487980 100644
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/01/09/base16-shell-tmux-vim-color-switching-dead-simple/">base16 shell tmux vim color switching dead simple</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/01/05/starting-again/">Starting again</a>
       </li>
     
@@ -751,10 +823,6 @@ index 182c30b..f487980 100644
     
       <li class="post">
         <a href="/blog/2014/01/26/embjerjs-is-a-more-than-just-model-view-controller/">EmbjerJS is a more than just Model View Controller</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/22/using-rails-composer-followup/">Using Rails Composer &#8211; followup</a>
       </li>
     
   </ul>
