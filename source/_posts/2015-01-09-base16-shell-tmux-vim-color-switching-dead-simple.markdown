@@ -66,24 +66,35 @@ files. These files allow the following:
 
 ### Super quick setup:
 
-1. Until I convince [Chris](https://github.com/chriskempson) to include this in his project, clone my fork
+Until I convince [Chris](https://github.com/chriskempson) to include this in his project, clone my fork
+
 ```
-git clone https://github.com/JohnMorales/base16-shell
+$ git clone https://github.com/JohnMorales/base16-shell
 ```
 
-2. Add the following to your bashrc _(change the location to match where you've cloned the base-16 shell)_:
+Add the following to your bashrc _(change the location to match where you've cloned the base-16 shell)_:
+
 ```
 if [ -n "$PS1" ]; then # if statement guards adding these helpers for non-interative shells
   eval "$(~/Development/base-16/shell/profile_helper.sh)"
 fi
 ```
 
-3. Add the following to your vimrc:
+Add the following to your vimrc:
+
 ```
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
+```
+
+### Usage
+
+In new shells, use the bash functions to change the color scheme:
+
+```
+$ base16_default_dark
 ```
 
 Quick and painless color switching, Enjoy.
