@@ -80,7 +80,14 @@ if [ -n "$PS1" ]; then # if statement guards adding these helpers for non-intera
 fi
 ```
 
-Add the following to your vimrc:
+Install the [chriskempson/base16-vim](https://github.com/chriskempson/base16-vim) plugin
+for super quick [vundle](https://github.com/gmarik/Vundle.vim) setup, add to your vimrc:
+
+`plugin 'chriskempson/base16-vim'`
+
+then install base16-vim using `:PluginInstall`
+
+Lastly, Add the following to your vimrc:
 
 ```
 if filereadable(expand("~/.vimrc_background"))
